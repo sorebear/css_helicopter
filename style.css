@@ -1,0 +1,104 @@
+/*Background Styling*/
+body {
+    height: 100vh;
+    background: linear-gradient(#3D6632, #6AB357);
+    background-repeat: no-repeat;
+}
+
+/*CSS for helicopter animations*/
+.helicopter-blades:hover {
+    animation-duration: 25s;
+}
+
+.helicopter-blades:active {
+    animation-duration: 5s;
+}
+
+.helicopter:active {
+    transform: translate(-50%, -125%)
+}
+
+@keyframes flying {
+    0%   {transform: scale3d(1, .5, 1) rotateZ(0deg);}
+    100% {transform: scale3d(1, .5, 1) rotateZ(3600deg);}
+}
+
+/*Style for the containing helicopter DIV*/
+.helicopter {
+    transition: 10s;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 20%);
+}
+
+/*Style for the helicopter blades*/
+.helicopter-blades {
+    position: relative;
+    transition: 1s;
+    width: 500px;
+    height: 500px;
+    transform: scale3d(1, .5, 1) rotateZ(15deg);
+    animation-name: flying;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.center-spoke {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background-color: #F5D9A7;
+}
+
+.blade {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #F5D9A7;
+    height: 50%;
+    width: 4%;
+    border-radius: 5% 70% 0 50%;
+}
+
+.blade_1 {
+    bottom: 50%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.blade_2 {
+    bottom: 50%;
+    right: 25%;
+    transform: translate(50%, 50%) rotate(90deg);
+}
+
+.blade_3 {
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) rotate(180deg);
+}
+
+.blade_4 {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+/*Style for the helicopter body*/
+.helicopter-body {
+    height: 150px;
+    width: 200px;
+    border-radius: 50% 50% 0 0;
+    background-color: #723146;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+}
+
+
